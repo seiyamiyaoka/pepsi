@@ -1,0 +1,10 @@
+<h1>問い合わせ<h1>
+  
+ 
+  
+  
+         <%= form_for (@inquiry),url:inquiries_confirm_path do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_area :content %>
+         <%= f.submit "確認"  %>
+  <% end %>

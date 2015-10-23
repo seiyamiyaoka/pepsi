@@ -1,0 +1,29 @@
+
+
+<h1>確認</h1>
+<%= form_for (@inquiry),url:inquiries_thanx_path do |f| %>
+<%= f.hidden_field :name %>
+<%= @inquiry.name %>
+<%= f.hidden_field :content %>
+<%= @inquiry.content %>
+<%= f.submit "本当に送ってもいいですか？" %>
+<% end %>
+
+ <% if @inquiry.errors.any? %>
+<div id="error_explanation" class="alert-danger">
+  
+  <button class="btn btn-primary" type="button">
+  Messages <span class="badge"><%= @inquiry.errors.count %>件のエラー</span>
+  
+  
+      <h2></h2>
+
+      <ul>
+        <!-- ここでeachメソッドを用いて、エラーメッセージを表示させてください。 -->
+       <%  @inquiry.errors.full_messages.each do |message| %>
+       <li class="errors">
+        <p class="text-left"> <%= message %></p> 
+         
+         <% end %>
+         <% end %>
+

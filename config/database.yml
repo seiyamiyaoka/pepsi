@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: pepsi_production
-  username: pepsi
-  password: <%= ENV['PEPSI_DATABASE_PASSWORD'] %>
+  database: ddhnpc32akbqpc
+  username: sspexlbojnfzni
+  password: 3Y-SHgucZXITKinBeyjYizwNLJ
+  hostname: ec2-107-21-219-109.compute-1.amazonaws.com:5432
