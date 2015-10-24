@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
+  
+
   devise_for :users
+  resources :users, only:[:index,:show]
+  
   get 'inquiries/index' => 'inquiry#index'
 
   post 'inquiries/confirm' => 'inquiry#confirm'
