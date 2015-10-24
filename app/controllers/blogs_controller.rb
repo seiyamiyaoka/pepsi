@@ -69,6 +69,6 @@ before_filter :authenticate_user!
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :content)
+      params.require(:blog).permit(:title, :content,:user_id)
     end
 end
